@@ -6,12 +6,14 @@ def romanToInt(s: str) -> int:
     for i in range(len(numeral_list)):
         if numeral_list[i] in numeral_values:
             if i < len(numeral_list) - 1:
-                if numeral_list[i + 1] == numeral_values[i + 1]:
+                if numeral_values[numeral_list[i + 1]] > numeral_values[numeral_list[i]]:
                     answer -= numeral_values[numeral_list[i]]
                 else:
                     answer += numeral_values[numeral_list[i]]
+            else:
+                answer += numeral_values[numeral_list[i]]
             # chatgpt said that i need to put numerallist[i] in numeral value
     return answer
 
-print(romanToInt("IV"))
+print(romanToInt("IX"))
 
