@@ -4,6 +4,9 @@ def longestCommonPrefix(strs: list[str]) -> str:
     # of strings match another append into answer list
     listoflist = [[[k for k in j] for j in i.split()] for i in strs] # list within a list within a list
     print(listoflist)
+    
+    # if k in j == k in j+1:
+    #   answer.append(k) 
 
 
 longestCommonPrefix(["flower","flow","flight"])
